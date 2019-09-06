@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cat Details</title>
+</head>
+<body>
+    <div class="wrapper">
+        <h1>Details Page for <%= kitty.name %></h1>
+        <img src="/images/<%= kitty.pic %>" alt="cat image">
+        <p>Favorite food: <%= kitty.fav_food %></p>
+        <p>Age: <%= kitty.age %></p>
+        <div>
+            <p>Sleeping spots:</p>
+            <ul>
+            <% for(var x in kitty.sleeping_spots) { %>
+                <li><%= kitty.sleeping_spots[x] %></li>
+            <% } %>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
